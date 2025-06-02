@@ -11889,12 +11889,10 @@ var bH = (function () {
                 i(a.currentResult);
               }),
             o.cache &&
-              a.client
-                .getQueryCache()
-                .notify({
-                  query: a.currentQuery,
-                  type: "observerResultsUpdated",
-                });
+              a.client.getQueryCache().notify({
+                query: a.currentQuery,
+                type: "observerResultsUpdated",
+              });
         });
       }),
       t
@@ -74196,7 +74194,7 @@ function AFt() {
   const { styles: e } = ra();
   return b.jsxs("p", {
     children: [
-      "Created with",
+      "Creado por",
       " ",
       b.jsx("a", {
         href: "https://mz-bets.vercel.app/",
@@ -76487,22 +76485,20 @@ function Djt({ course: e, editable: t, onChange: r }) {
           onBlur: (n) => r && r(n.target.textContent, "sections.welcome.title"),
           children: e.sections.welcome.title,
         }),
-        me
-          .keys(e.sections.welcome.content)
-          .map((n) =>
-            b.jsx(
-              "p",
-              {
-                className: "tw-mt-4",
-                contentEditable: t,
-                suppressContentEditableWarning: !0,
-                onBlur: (o) =>
-                  r && r(o.target.textContent, `sections.welcome.content.${n}`),
-                children: e.sections.welcome.content[n],
-              },
-              n
-            )
-          ),
+        me.keys(e.sections.welcome.content).map((n) =>
+          b.jsx(
+            "p",
+            {
+              className: "tw-mt-4",
+              contentEditable: t,
+              suppressContentEditableWarning: !0,
+              onBlur: (o) =>
+                r && r(o.target.textContent, `sections.welcome.content.${n}`),
+              children: e.sections.welcome.content[n],
+            },
+            n
+          )
+        ),
       ],
     }),
   });
@@ -76798,54 +76794,50 @@ function Yd(e) {
       children: [
         b.jsx(tj, { number: n, id: `${t}-title`, course: c, children: r }),
         a &&
-          me
-            .orderBy(me.keys(a))
-            .map((k) =>
-              b.jsx(
-                "p",
-                {
-                  className:
-                    "tw-mt-8 tw-text-lg tw-tracking-tight tw-text-slate-700",
-                  contentEditable: f,
-                  suppressContentEditableWarning: !0,
-                  onBlur: (R) => N(R.target.textContent, `content.${k}`),
-                  children: a[k],
-                },
-                k
-              )
-            ),
+          me.orderBy(me.keys(a)).map((k) =>
+            b.jsx(
+              "p",
+              {
+                className:
+                  "tw-mt-8 tw-text-lg tw-tracking-tight tw-text-slate-700",
+                contentEditable: f,
+                suppressContentEditableWarning: !0,
+                onBlur: (R) => N(R.target.textContent, `content.${k}`),
+                children: a[k],
+              },
+              k
+            )
+          ),
         b.jsx("ul", {
           role: "list",
           className: "tw-mt-8 tw-space-y-3",
           children:
             i &&
-            me
-              .orderBy(me.keys(i))
-              .map((k) =>
-                b.jsxs(
-                  "li",
-                  {
-                    className: "tw-flex",
-                    contentEditable: f,
-                    suppressContentEditableWarning: !0,
-                    onBlur: (R) => N(R.target.textContent, `list.${k}`),
-                    children: [
-                      b.jsx(Ojt, {
-                        className: ye(
-                          "tw-h-8 tw-w-8 tw-flex-none",
-                          C === "blue" && "tw-fill-blue-500",
-                          C === "red" && "tw-fill-red-500",
-                          C === "orange" && "tw-fill-orange-500",
-                          C === "purple" && "tw-fill-purple-500",
-                          C === "green" && "tw-fill-green-500"
-                        ),
-                      }),
-                      b.jsx("span", { className: "tw-ml-4", children: i[k] }),
-                    ],
-                  },
-                  k
-                )
-              ),
+            me.orderBy(me.keys(i)).map((k) =>
+              b.jsxs(
+                "li",
+                {
+                  className: "tw-flex",
+                  contentEditable: f,
+                  suppressContentEditableWarning: !0,
+                  onBlur: (R) => N(R.target.textContent, `list.${k}`),
+                  children: [
+                    b.jsx(Ojt, {
+                      className: ye(
+                        "tw-h-8 tw-w-8 tw-flex-none",
+                        C === "blue" && "tw-fill-blue-500",
+                        C === "red" && "tw-fill-red-500",
+                        C === "orange" && "tw-fill-orange-500",
+                        C === "purple" && "tw-fill-purple-500",
+                        C === "green" && "tw-fill-green-500"
+                      ),
+                    }),
+                    b.jsx("span", { className: "tw-ml-4", children: i[k] }),
+                  ],
+                },
+                k
+              )
+            ),
         }),
         s &&
           b.jsxs(b.Fragment, {
@@ -77217,19 +77209,17 @@ function Rjt({ course: e, locked: t }) {
                           " ",
                         ],
                       }),
-                      me
-                        .keys(n.content)
-                        .map((o) =>
-                          b.jsx(
-                            "p",
-                            {
-                              className:
-                                "tw-mt-4 tw-text-lg tw-tracking-tight tw-text-slate-700",
-                              children: n.content ? n.content[o] : "",
-                            },
-                            o
-                          )
-                        ),
+                      me.keys(n.content).map((o) =>
+                        b.jsx(
+                          "p",
+                          {
+                            className:
+                              "tw-mt-4 tw-text-lg tw-tracking-tight tw-text-slate-700",
+                            children: n.content ? n.content[o] : "",
+                          },
+                          o
+                        )
+                      ),
                       b.jsx("p", {
                         className: "tw-mt-8",
                         children: b.jsxs(tc, {
